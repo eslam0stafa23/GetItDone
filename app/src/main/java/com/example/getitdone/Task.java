@@ -1,7 +1,12 @@
 package com.example.getitdone;
 
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
+
+/*
+This file is the entity file which contains the Entity (Table) name and its elements (Columns)
+it also contains the getter method and the constructor and a setter method for the id (Primary Key) element
+ */
 
 @Entity(tableName = "task_table")
 public class Task {

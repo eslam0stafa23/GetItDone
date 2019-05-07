@@ -20,8 +20,9 @@ android {
 
 dependencies {
 
-    def lifecycle_version = "2.0.0"
-    def room_version = "2.1.0-alpha07"
+    def lifecycle_version = "1.1.1"
+    def room_version = "1.1.1"
+    def butterKnife_version = "10.1.0"
 
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -34,10 +35,14 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     // Lifecycle Components
-    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
-
+    implementation "android.arch.lifecycle:extensions:$lifecycle_version"
+    annotationProcessor "android.arch.lifecycle:compiler:$lifecycle_version"
     // Room Components
-    implementation "androidx.room:room-runtime:$room_version"
+    implementation "android.arch.persistence.room:runtime:$room_version"
+    annotationProcessor "android.arch.persistence.room:compiler:$room_version"
+    //Butter Knife
+    implementation "com.jakewharton:butterknife:$butterKnife_version"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterKnife_version"
 
 
 }
